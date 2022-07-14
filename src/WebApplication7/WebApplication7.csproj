@@ -16,7 +16,7 @@
     <Exec Command="dotnet new tool-manifest --force" />
     <Exec Command="dotnet tool install --version 5.3.1 Swashbuckle.AspNetCore.Cli" />
     <Exec Command="dotnet tool restore" />
-    <Exec Command="dotnet swagger tofile --output docs\swagger.json $(OutputPath)\$(AssemblyName).dll v1" />
+    <Exec Command="dotnet swagger tofile --output docs\swagger.yaml $(OutputPath)\$(AssemblyName).dll v1" />
   </Target>
 
 
