@@ -37,7 +37,6 @@ C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\bin\Debug\netco
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.csprojAssemblyReference.cache
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.AssemblyInfoInputs.cache
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.AssemblyInfo.cs
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.csproj.CoreCompileInputs.cache
