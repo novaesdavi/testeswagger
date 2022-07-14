@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="docs\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet new tool-manifest --force" />
+    <Exec Command="dotnet tool install --version 5.3.1 Swashbuckle.AspNetCore.Cli" />
+    <Exec Command="dotnet tool restore" />
+    <Exec Command="dotnet swagger tofile --output docs\swagger.json $(OutputPath)\$(AssemblyName).dll v1" />
+  </Target>
+
+
+</Project>
