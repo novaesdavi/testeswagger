@@ -50,3 +50,5 @@ C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netco
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.dll
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.pdb
 C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\obj\Debug\netcoreapp3.1\WebApplication7.genruntimeconfig.cache
+C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\dnova\.gitRepositories\testeswagger\src\WebApplication7\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
