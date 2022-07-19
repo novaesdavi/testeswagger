@@ -16,5 +16,14 @@
             <response code="200">Retorna a temperatura em ceucius</response>
             <response code="400">If the item is null</response>
         </member>
+        <member name="T:WebApplication7.WeatherForecast">
+            <summary>objeto de temperatura</summary>
+        </member>
+        <member name="P:WebApplication7.WeatherForecast.Date">
+            <summary>Data de quando a temperatura se refere</summary>
+        </member>
+        <member name="P:WebApplication7.WeatherForecast.TemperatureC">
+            <summary>temperatura em Celsius</summary>
+        </member>
     </members>
 </doc>
