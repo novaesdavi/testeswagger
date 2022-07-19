@@ -19,7 +19,14 @@
         "description": "Exemplo de Chamada:\r\n    GET /WeatherForecast",
         "responses": {
           "200": {
-            "description": "Retorna a temperatura em ceucius"
+            "description": "Retorna a temperatura em ceucius",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WeatherForecast"
+                }
+              }
+            }
           },
           "400": {
             "description": "If the item is null"
@@ -28,5 +35,31 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }

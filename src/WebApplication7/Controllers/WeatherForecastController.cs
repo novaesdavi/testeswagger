@@ -33,6 +33,7 @@ namespace WebApplication7.Controllers
         /// <response code="200">Retorna a temperatura em ceucius</response>
         /// <response code="400">If the item is null</response>
         [HttpGet]
+        [Produces("application/json",Type = typeof(WeatherForecast))]
         public async Task<IActionResult> Get()
         {
            // WeatherForecast
