@@ -22,7 +22,10 @@ namespace WebApplication7.Controllers
         {
             _logger = logger;
         }
-
+        /// <summary>
+        /// Consulta de Temperatura Geral
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {

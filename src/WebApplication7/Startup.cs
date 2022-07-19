@@ -8,7 +8,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace WebApplication7
@@ -27,7 +29,27 @@ namespace WebApplication7
         {
             services.AddControllers();
 
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(opt =>
+            {
+
+                opt.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Serviço de Temperatura",
+                    Description = "Api Rest responsavel pela temperatura global!!!",
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                    {
+                        Name = "Davi",
+                        Email = "davi@davi.com"
+                    }
+                });
+
+
+                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                opt.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+            }
+        );
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,17 +58,10 @@ namespace WebApplication7
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-
-                // Enable middleware to serve generated Swagger as a JSON endpoint.
-                app.UseSwagger(c =>
-                {
-                    c.SerializeAsV2 = true;
-                });
-                // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.)
+                app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                    c.RoutePrefix = string.Empty;
+                    c.SwaggerEndpoint("v1/swagger.json", "My API V1");
                 });
             }
 
@@ -59,7 +74,10 @@ namespace WebApplication7
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapSwagger();
             });
+
+
         }
     }
 }
