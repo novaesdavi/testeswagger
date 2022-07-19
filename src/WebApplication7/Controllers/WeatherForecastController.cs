@@ -25,7 +25,13 @@ namespace WebApplication7.Controllers
         /// <summary>
         /// Consulta de Temperatura Geral
         /// </summary>
-        /// <returns></returns>
+        /// <returns>algumas temperaturas</returns>
+        /// <remarks>
+        /// Exemplo de Chamada:
+        ///     GET /WeatherForecast
+        /// </remarks>
+        /// <response code="200">Retorna a temperatura em ceucius</response>
+        /// <response code="400">If the item is null</response>
         [HttpGet]
         public async Task<IActionResult> Get()
         {

@@ -16,9 +16,13 @@
           "WeatherForecast"
         ],
         "summary": "Consulta de Temperatura Geral",
+        "description": "Exemplo de Chamada:\r\n    GET /WeatherForecast",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Retorna a temperatura em ceucius"
+          },
+          "400": {
+            "description": "If the item is null"
           }
         }
       }
